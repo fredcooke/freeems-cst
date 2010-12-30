@@ -1,0 +1,35 @@
+/**
+ *
+ * freeems-cst: freeems 'comms smoke test'
+ *
+ * Copyright (C) 2010 Sean Stasiak sstasiak@gmail.com
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+You need:
+    cmake
+    boost
+    g++
+
+Building under Linux:
+    I usually do out of source builds, so make a dir outside of
+    where this project is and:
+    cd <your_build_dir>
+    cmake <path_to_src>
+    make
+
+Building under Windows:
+    TODO
