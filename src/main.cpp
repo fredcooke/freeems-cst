@@ -6,7 +6,7 @@
  *
  * freeems-cst: freeems 'comms smoke test'
  *
- * Copyright (C) 2010 Sean Stasiak sstasiak@gmail.com
+ * Copyright (C) 2010 Sean Stasiak sstasiak at gmail
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
