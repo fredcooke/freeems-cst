@@ -22,10 +22,13 @@ add_definitions(
     -Wall
     -Wunused
     -Wcast-qual
-    -Wold-style-cast
     -ansi
     -pedantic-errors
     )
+
+if( NOT APPLE )
+    add_definitions( -Wold-style-cast )
+endif( NOT APPLE )
 
 set( DIRS
      src
