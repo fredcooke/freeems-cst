@@ -1,4 +1,4 @@
-project( cst CXX )
+project( freeems-cst CXX )
 CMAKE_MINIMUM_REQUIRED( VERSION 2.8 )
 
 # set Debug builds as default (if not already changed in the cache)
@@ -23,4 +23,14 @@ add_definitions(
     -pedantic-errors
     )
 
-add_subdirectory( src )
+set( DIRS
+     src
+     test
+     )
+
+set( EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}/bin" )
+set( LIBRARY_OUTPUT_PATH "${CMAKE_BINARY_DIR}/lib" )
+
+foreach( dir ${DIRS} )
+    add_subdirectory( ${dir} )
+endforeach( dir )

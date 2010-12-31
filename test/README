@@ -1,0 +1,9 @@
+ /**
+  * I'm not sure what I'm getting into with the Boost library so this is
+  * my attempt to get familiar with it via some simple test assumptions
+  *
+  * this indirectly benefits freeems-cst, it's my 'sandbox' for
+  * experimenting with Boost to get me up to a productive point where I
+  * can add little bits of functionality to freeems-cst with what I learn
+  * from these series of cst-test(n).cpp files.
+  */
