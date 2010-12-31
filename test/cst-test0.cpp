@@ -27,7 +27,14 @@
 #define BOOST_TEST_MAIN
 #include <boost/test/unit_test.hpp>
 
+#include <boost/asio/serial_port.hpp>
+using namespace boost::asio;
+
 BOOST_AUTO_TEST_CASE( cst_test0 )
 {
-    BOOST_REQUIRE( true) ;
+    io_service io;
+    serial_port sp( io );
+
+    sp.open( "/dev/ttyS0" );       /**< attempt to open a port */
+    sp.close();
 }
