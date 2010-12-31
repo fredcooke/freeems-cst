@@ -10,6 +10,7 @@ ENDIF()
 
 find_package( Boost COMPONENTS
               unit_test_framework
+              system
               )
 
 link_directories( ${Boost_LIBRARY_DIRS} )
