@@ -13,7 +13,7 @@ Fedora specific instructions:
     CMake:
         yum install cmake
     Boost:
-        yum install boost-test
+        yum install boost-devel
     G++
         yum install gcc
 
