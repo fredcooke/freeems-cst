@@ -8,7 +8,10 @@ IF(NOT CMAKE_BUILD_TYPE)
       FORCE)
 ENDIF()
 
-find_package( Boost )
+find_package( Boost COMPONENTS
+              unit_test_framework
+              )
+
 link_directories( ${Boost_LIBRARY_DIRS} )
 include_directories( ${Boost_INCLUDE_DIRS} )
 

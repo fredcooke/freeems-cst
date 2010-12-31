@@ -23,10 +23,11 @@
  *
  */
 
-int
-main( int const argc,
-      char const *const argv[] )
+#define BOOST_TEST_DYN_LINK
+#define BOOST_TEST_MAIN
+#include <boost/test/unit_test.hpp>
+
+BOOST_AUTO_TEST_CASE( cst_test0 )
 {
-    (void)argc, (void)argv;
-    return 0;
+    BOOST_REQUIRE( true) ;
 }
