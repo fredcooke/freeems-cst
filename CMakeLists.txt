@@ -11,10 +11,13 @@ ENDIF()
 find_package( Boost COMPONENTS
               unit_test_framework
               system
+              program_options
               )
 
 link_directories( ${Boost_LIBRARY_DIRS} )
-include_directories( ${Boost_INCLUDE_DIRS} )
+include_directories( ${Boost_INCLUDE_DIRS}
+                     ./inc
+                     )
 
 add_definitions(
     -Wextra
@@ -33,6 +36,10 @@ endif( NOT APPLE )
 set( DIRS
      src
      test
+     )
+
+set( LIBS
+     ${Boost_LIBRARIES}
      )
 
 set( EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}/bin" )

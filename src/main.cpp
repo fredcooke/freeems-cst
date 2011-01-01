@@ -1,6 +1,6 @@
 /**
  * @file       main.cpp
- * @headerfile
+ * @headerfile main.h
  * @author     sean
  * @brief      freeems-cst entry point
  *
@@ -23,17 +23,39 @@
  *
  */
 
-#include <boost/lambda/lambda.hpp>
+#include "main.h"
+
+/* boost::program_options */
+#include <boost/program_options/options_description.hpp>
+#include <boost/program_options/variables_map.hpp>
+#include <boost/program_options/parsers.hpp>
+namespace po = boost::program_options;
+
+/* std:: */
+#include <string>
 #include <iostream>
-#include <iterator>
-#include <algorithm>
 
-int main()
+int
+main( int argc,
+      char *argv[] )
 {
-    using namespace boost::lambda;
-    typedef std::istream_iterator<int> in;
+    const std::string caption( "freeems-cst" );
+    po::options_description od( caption, 80 );
+    od.add_options()
+        ( "help", "show help" )
+    ;
 
-    std::for_each(
-        in(std::cin), in(), std::cout << (_1 * 3) << " " );
+    po::variables_map vm;
+    po::store( po::parse_command_line( argc, argv, od ) , vm );
+    po::notify( vm );
+
+    const po::variable_value help = vm["help"];
+    if( !help.empty() )     /**< someone would like to see help */
+    {
+        std::cout << od;
+        return 0;
+    }
+
+    return 0;   /**< TODO: implement !0 on failure for future automation plans */
 }
 
