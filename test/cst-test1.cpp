@@ -176,8 +176,8 @@ BOOST_AUTO_TEST_CASE( encode_all_framed_by_junk )
 
     uint8_t const expected[] = { 0x11,
                                  feEncoder::ESC, (feEncoder::ESC ^ 0xFF),
-                                 feEncoder::ETX, (feEncoder::ETX ^ 0xFF),
-                                 feEncoder::STX, (feEncoder::STX ^ 0xFF),
+                                 feEncoder::ESC, (feEncoder::ETX ^ 0xFF),
+                                 feEncoder::ESC, (feEncoder::STX ^ 0xFF),
                                  0x22, 0x33 };
     BOOST_CHECK_EQUAL_COLLECTIONS( v.get()->begin(), v.get()->end(),
                                    expected, expected+sizeof(expected) );
