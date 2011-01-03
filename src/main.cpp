@@ -56,6 +56,14 @@ main( int argc,
         return 0;
     }
 
+    /* start with bunch of repetitive stx's and etx's only */
+
+    /* move to empty pkts */
+
+    /* move to echo pkts */
+
+    /* move to ... */
+
     return 0;   /**< TODO: implement !0 on failure for future automation plans */
 }
 

@@ -1,5 +1,6 @@
 set( TESTS
      cst-test0
+     cst-test1
      )
 
 foreach( test ${TESTS} )
